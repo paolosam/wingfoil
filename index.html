@@ -84,6 +84,7 @@
         .type-ocean{background:rgba(34,211,238,0.08);color:var(--accent-dim);border:1px solid rgba(34,211,238,0.12)}
         .type-lake{background:var(--lake-bg);color:var(--lake);border:1px solid rgba(6,182,212,0.12)}
         .type-wind{background:rgba(52,211,153,0.08);color:var(--green);border:1px solid rgba(52,211,153,0.15);font-weight:600}
+        .travel-time{font-size:0.55rem;color:var(--text-dim);padding:0.1rem 0.4rem;border-radius:20px;background:rgba(148,163,184,0.06);border:1px solid rgba(148,163,184,0.08);white-space:nowrap;letter-spacing:0.02em}
 
         .card-links{display:flex;gap:0.35rem;align-items:center}
         .wg-link{font-size:0.68rem;color:var(--accent-dim);text-decoration:none;padding:0.22rem 0.6rem;border-radius:20px;border:1px solid rgba(34,211,238,0.12);transition:all .25s cubic-bezier(.4,0,.2,1);white-space:nowrap;font-weight:500;letter-spacing:0.02em}
@@ -140,9 +141,9 @@
 <body>
 
 <header>
-    <h1>🪁 Wingfoil — Spots Dashboard</h1>
+    <h1>🪁 Wingfoil desde Madrid — Todos los spots</h1>
     <div class="sub">
-        Prevision embebida · Windguru en cada spot
+        Tiempos de viaje desde Av. del Manzanares · Prevision Windy · Windguru en cada spot
     </div>
 </header>
 
@@ -164,9 +165,9 @@
         <div class="region-head" onclick="toggleRegion(this)">
             <span class="region-chevron">▼</span>
             <span style="font-size:1.05rem">🏞</span>
-            <h2>Centro — Madrid, Toledo, Cuenca y Guadalajara</h2>
+            <h2>Norte — Sierra Norte de Madrid</h2>
             <span class="region-tag">Agua plana</span>
-            <a class="open-all" onclick="openAllWG([456408,83070,3619,104905,185341,141739])">Abrir todos en Windguru ➜</a>
+            <a class="open-all" onclick="openAllWG([456408,83070])">Abrir todos en Windguru ➜</a>
         </div>
         <div class="spots-grid">
 
@@ -175,8 +176,9 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Atazar</span>
-                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                         <span class="spot-type type-wind">N · NW</span>
+                        <span class="travel-time">🚗 1h 10min</span>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/456408" target="_blank" rel="noopener">Windguru ➜</a>
@@ -200,8 +202,9 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">El Vellon</span>
-                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                         <span class="spot-type type-wind">NW · SW · SE</span>
+                        <span class="travel-time">🚗 50min</span>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/83070" target="_blank" rel="noopener">Windguru ➜</a>
@@ -218,13 +221,27 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <section class="region">
+        <div class="region-head" onclick="toggleRegion(this)">
+            <span class="region-chevron">▼</span>
+            <span style="font-size:1.05rem">🏞</span>
+            <h2>Oeste — Sierra de Guadarrama y Toledo</h2>
+            <span class="region-tag">Agua plana</span>
+            <a class="open-all" onclick="openAllWG([3619,104905])">Abrir todos en Windguru ➜</a>
+        </div>
+        <div class="spots-grid">
+
             <!-- VALMAYOR -->
             <div class="spot-card">
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Valmayor</span>
-                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                         <span class="spot-type type-wind">N</span>
+                        <span class="travel-time">🚗 45min</span>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/3619" target="_blank" rel="noopener">Windguru ➜</a>
@@ -245,8 +262,9 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Cazalegas</span>
-                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                         <span class="spot-type type-wind">W · SW</span>
+                        <span class="travel-time">🚗 1h 10min</span>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/104905" target="_blank" rel="noopener">Windguru ➜</a>
@@ -264,13 +282,27 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <section class="region">
+        <div class="region-head" onclick="toggleRegion(this)">
+            <span class="region-chevron">▼</span>
+            <span style="font-size:1.05rem">🏞</span>
+            <h2>Este — Cuenca y Guadalajara</h2>
+            <span class="region-tag">Agua plana</span>
+            <a class="open-all" onclick="openAllWG([185341,141739])">Abrir todos en Windguru ➜</a>
+        </div>
+        <div class="spots-grid">
+
             <!-- ALARCON -->
             <div class="spot-card">
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Pantano de Alarcon</span>
-                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                         <span class="spot-type type-wind">SE · S · SW · N</span>
+                        <span class="travel-time">🚗 2h 00min</span>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/185341" target="_blank" rel="noopener">Windguru ➜</a>
@@ -287,13 +319,15 @@
                     <iframe src="https://embed.windy.com/embed2.html?lat=39.72&lon=-2.10&detailLat=39.72&detailLon=-2.10&zoom=10&level=surface&overlay=wind&product=gfs&metricWind=kt&metricTemp=%C2%B0C&detail=true&marker=true&calendar=now&type=forecast&location=coordinates" loading="lazy" title="Pantano de Alarcon"></iframe>
                 </div>
             </div>
+
             <!-- ENTREPEÑAS (ALOCEN) -->
             <div class="spot-card">
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Entrepeñas (Alocen)</span>
-                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                         <span class="spot-type type-wind">SW · NE · N</span>
+                        <span class="travel-time">🚗 1h 20min</span>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/141739" target="_blank" rel="noopener">Windguru ➜</a>
@@ -327,8 +361,9 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">La Loteta</span>
-                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                         <span class="spot-type type-wind">NW (Cierzo)</span>
+                        <span class="travel-time">🚗 3h 00min</span>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/216216" target="_blank" rel="noopener">Windguru ➜</a>
@@ -364,8 +399,9 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Tarifa</span>
-                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                         <span class="spot-type type-wind">W (Poniente) · E (Levante)</span>
+                        <span class="travel-time">🚗 6h 45min</span>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/43" target="_blank" rel="noopener">Windguru ➜</a>
@@ -385,6 +421,7 @@
                     <div class="card-left">
                         <span class="spot-name">Punta Umbria</span>
                         <span class="spot-type type-ocean">Playa — Huelva</span>
+                        <span class="travel-time">🚗 6h 20min</span>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/48748" target="_blank" rel="noopener">Windguru ➜</a>
@@ -412,8 +449,9 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Somo</span>
-                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                         <span class="spot-type type-wind">NE · NW</span>
+                        <span class="travel-time">🚗 4h 40min</span>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/48694" target="_blank" rel="noopener">Windguru ➜</a>
@@ -432,8 +470,9 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Laredo</span>
-                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                         <span class="spot-type type-wind">NE · E</span>
+                        <span class="travel-time">🚗 4h 30min</span>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/11040" target="_blank" rel="noopener">Windguru ➜</a>
@@ -466,6 +505,7 @@
                     <div class="card-left">
                         <span class="spot-name">Playa del Trabucador</span>
                         <span class="spot-type type-ocean">Delta del Ebro — Tarragona</span>
+                        <span class="travel-time">🚗 5h 15min</span>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/4899" target="_blank" rel="noopener">Windguru ➜</a>
@@ -492,8 +532,9 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Denia</span>
-                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                         <span class="spot-type type-ocean">Costa — Alicante</span>
+                        <span class="travel-time">🚗 4h 20min</span>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/6359" target="_blank" rel="noopener">Windguru ➜</a>
@@ -524,6 +565,7 @@
                     <div class="card-left">
                         <span class="spot-name">Cabo de Gata</span>
                         <span class="spot-type type-ocean">Costa — Almeria</span>
+                        <span class="travel-time">🚗 5h 00min</span>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/38196" target="_blank" rel="noopener">Windguru ➜</a>
@@ -538,8 +580,9 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Playa del Pudrimel</span>
-                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                         <span class="spot-type type-ocean">Mar Menor — Murcia</span>
+                        <span class="travel-time">🚗 4h 40min</span>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/48826" target="_blank" rel="noopener">Windguru ➜</a>
@@ -562,8 +605,7 @@
 
 <footer>
     Prevision embebida de <a href="https://www.windy.com" target="_blank">Windy.com</a> (modelo GFS) —
-    Prevision detallada en <a href="https://www.windguru.cz" target="_blank">Windguru.cz</a> —
-    Condiciones wingfoil: viento &ge; 12 nudos, sin lluvia
+    Prevision detallada en <a href="https://www.windguru.cz" target="_blank">Windguru.cz</a>
 </footer>
 
 <script>
