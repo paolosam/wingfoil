@@ -88,7 +88,7 @@
             .tab-btn{padding:.85rem .5rem;font-size:.85rem;min-height:48px}
             .region-head{flex-wrap:wrap;gap:.35rem}
             .open-all{margin-left:0}
-            .embed-wrap{height:180px}
+            .embed-wrap{height:210px}
             .wg-link{padding:.3rem .6rem;min-height:36px;display:inline-flex;align-items:center}
         }
         /* ── SMALL PHONE ────────────────────── */
@@ -99,7 +99,7 @@
             .card-top{padding:.5rem .6rem;flex-wrap:wrap;gap:.4rem}
             .spot-name{font-size:.85rem}
             .spot-type{font-size:.52rem}
-            .embed-wrap{height:165px}
+            .embed-wrap{height:195px}
             .region-head h2{font-size:.9rem}
         }
     </style>
@@ -280,40 +280,51 @@
 
     <section class="region">
         <div class="region-head">
-            <span style="font-size:1.05rem">🏖</span>
-            <h2>Costa Sur y Suroeste — Cadiz y Huelva</h2>
-            <span class="region-tag">Atlantico / Estrecho</span>
-            <a class="open-all" onclick="openAllWG([43,48748])">Abrir todos en Windguru ➜</a>
+            <span style="font-size:1.05rem">🐚</span>
+            <h2>Costa Noreste — Delta del Ebro</h2>
+            <span class="region-tag">Mediterraneo</span>
+            <a class="open-all" onclick="openAllWG([4899])">Abrir en Windguru ➜</a>
         </div>
         <div class="spots-grid">
             <div class="spot-card">
                 <div class="card-top">
                     <div class="card-left">
-                        <span class="spot-name">Tarifa</span>
-                        <span class="spot-type type-ocean">Estrecho — Cadiz</span>
+                        <span class="spot-name">Playa del Trabucador</span>
+                        <span class="spot-type type-ocean">Delta del Ebro — Tarragona</span>
                     </div>
                     <div class="card-links">
-                        <a class="wg-link" href="https://www.windguru.cz/43" target="_blank" rel="noopener">Windguru ➜</a>
+                        <a class="wg-link" href="https://www.windguru.cz/4899" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
                 </div>
                 <div class="embed-wrap">
-                    <a class="embed-fallback" href="https://www.windy.com/?36.01,-5.60,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
-                    <iframe src="https://embed.windy.com/embed2.html?lat=36.01&lon=-5.60&detailLat=36.01&detailLon=-5.60&zoom=10&level=surface&overlay=wind&product=gfs&metricWind=kt&metricTemp=%C2%B0C&detail=true&marker=true&calendar=now&type=forecast&location=coordinates" loading="lazy" title="Tarifa"></iframe>
+                    <a class="embed-fallback" href="https://www.windy.com/?40.62,0.73,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
+                    <iframe src="https://embed.windy.com/embed2.html?lat=40.62&lon=0.73&detailLat=40.62&detailLon=0.73&zoom=10&level=surface&overlay=wind&product=gfs&metricWind=kt&metricTemp=%C2%B0C&detail=true&marker=true&calendar=now&type=forecast&location=coordinates" loading="lazy" title="Playa del Trabucador"></iframe>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="region">
+        <div class="region-head">
+            <span style="font-size:1.05rem">⛵</span>
+            <h2>Costa Este — Valencia</h2>
+            <span class="region-tag">Mediterraneo</span>
+            <a class="open-all" onclick="openAllWG([6359])">Abrir en Windguru ➜</a>
+        </div>
+        <div class="spots-grid">
             <div class="spot-card">
                 <div class="card-top">
                     <div class="card-left">
-                        <span class="spot-name">Punta Umbria</span>
-                        <span class="spot-type type-ocean">Playa — Huelva</span>
+                        <span class="spot-name">Denia</span>
+                        <span class="spot-type type-ocean">Costa — Alicante</span>
                     </div>
                     <div class="card-links">
-                        <a class="wg-link" href="https://www.windguru.cz/48748" target="_blank" rel="noopener">Windguru ➜</a>
+                        <a class="wg-link" href="https://www.windguru.cz/6359" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
                 </div>
                 <div class="embed-wrap">
-                    <a class="embed-fallback" href="https://www.windy.com/?37.18,-6.96,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
-                    <iframe src="https://embed.windy.com/embed2.html?lat=37.18&lon=-6.96&detailLat=37.18&detailLon=-6.96&zoom=10&level=surface&overlay=wind&product=gfs&metricWind=kt&metricTemp=%C2%B0C&detail=true&marker=true&calendar=now&type=forecast&location=coordinates" loading="lazy" title="Punta Umbria"></iframe>
+                    <a class="embed-fallback" href="https://www.windy.com/?38.84,0.11,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
+                    <iframe src="https://embed.windy.com/embed2.html?lat=38.84&lon=0.11&detailLat=38.84&detailLon=0.11&zoom=10&level=surface&overlay=wind&product=gfs&metricWind=kt&metricTemp=%C2%B0C&detail=true&marker=true&calendar=now&type=forecast&location=coordinates" loading="lazy" title="Denia"></iframe>
                 </div>
             </div>
         </div>
@@ -362,51 +373,40 @@
 
     <section class="region">
         <div class="region-head">
-            <span style="font-size:1.05rem">⛵</span>
-            <h2>Costa Este — Valencia</h2>
-            <span class="region-tag">Mediterraneo</span>
-            <a class="open-all" onclick="openAllWG([6359])">Abrir en Windguru ➜</a>
+            <span style="font-size:1.05rem">🏖</span>
+            <h2>Costa Sur y Suroeste — Cadiz y Huelva</h2>
+            <span class="region-tag">Atlantico / Estrecho</span>
+            <a class="open-all" onclick="openAllWG([43,48748])">Abrir todos en Windguru ➜</a>
         </div>
         <div class="spots-grid">
             <div class="spot-card">
                 <div class="card-top">
                     <div class="card-left">
-                        <span class="spot-name">Denia</span>
-                        <span class="spot-type type-ocean">Costa — Alicante</span>
+                        <span class="spot-name">Tarifa</span>
+                        <span class="spot-type type-ocean">Estrecho — Cadiz</span>
                     </div>
                     <div class="card-links">
-                        <a class="wg-link" href="https://www.windguru.cz/6359" target="_blank" rel="noopener">Windguru ➜</a>
+                        <a class="wg-link" href="https://www.windguru.cz/43" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
                 </div>
                 <div class="embed-wrap">
-                    <a class="embed-fallback" href="https://www.windy.com/?38.84,0.11,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
-                    <iframe src="https://embed.windy.com/embed2.html?lat=38.84&lon=0.11&detailLat=38.84&detailLon=0.11&zoom=10&level=surface&overlay=wind&product=gfs&metricWind=kt&metricTemp=%C2%B0C&detail=true&marker=true&calendar=now&type=forecast&location=coordinates" loading="lazy" title="Denia"></iframe>
+                    <a class="embed-fallback" href="https://www.windy.com/?36.01,-5.60,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
+                    <iframe src="https://embed.windy.com/embed2.html?lat=36.01&lon=-5.60&detailLat=36.01&detailLon=-5.60&zoom=10&level=surface&overlay=wind&product=gfs&metricWind=kt&metricTemp=%C2%B0C&detail=true&marker=true&calendar=now&type=forecast&location=coordinates" loading="lazy" title="Tarifa"></iframe>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="region">
-        <div class="region-head">
-            <span style="font-size:1.05rem">🐚</span>
-            <h2>Costa Noreste — Delta del Ebro</h2>
-            <span class="region-tag">Mediterraneo</span>
-            <a class="open-all" onclick="openAllWG([4899])">Abrir en Windguru ➜</a>
-        </div>
-        <div class="spots-grid">
             <div class="spot-card">
                 <div class="card-top">
                     <div class="card-left">
-                        <span class="spot-name">Playa del Trabucador</span>
-                        <span class="spot-type type-ocean">Delta del Ebro — Tarragona</span>
+                        <span class="spot-name">Punta Umbria</span>
+                        <span class="spot-type type-ocean">Playa — Huelva</span>
                     </div>
                     <div class="card-links">
-                        <a class="wg-link" href="https://www.windguru.cz/4899" target="_blank" rel="noopener">Windguru ➜</a>
+                        <a class="wg-link" href="https://www.windguru.cz/48748" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
                 </div>
                 <div class="embed-wrap">
-                    <a class="embed-fallback" href="https://www.windy.com/?40.62,0.73,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
-                    <iframe src="https://embed.windy.com/embed2.html?lat=40.62&lon=0.73&detailLat=40.62&detailLon=0.73&zoom=10&level=surface&overlay=wind&product=gfs&metricWind=kt&metricTemp=%C2%B0C&detail=true&marker=true&calendar=now&type=forecast&location=coordinates" loading="lazy" title="Playa del Trabucador"></iframe>
+                    <a class="embed-fallback" href="https://www.windy.com/?37.18,-6.96,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
+                    <iframe src="https://embed.windy.com/embed2.html?lat=37.18&lon=-6.96&detailLat=37.18&detailLon=-6.96&zoom=10&level=surface&overlay=wind&product=gfs&metricWind=kt&metricTemp=%C2%B0C&detail=true&marker=true&calendar=now&type=forecast&location=coordinates" loading="lazy" title="Punta Umbria"></iframe>
                 </div>
             </div>
         </div>
