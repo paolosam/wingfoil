@@ -65,16 +65,13 @@
         .wg-link{font-size:0.7rem;color:var(--accent);text-decoration:none;padding:0.18rem 0.5rem;border-radius:6px;border:1px solid rgba(56,189,248,.3);transition:all .2s;white-space:nowrap}
         .wg-link:hover{background:var(--accent);color:var(--bg)}
 
-        /* ── INFO BUTTON ─────────────────────── */
-        .info-btn{position:relative;background:none;border:1px solid var(--accent);color:var(--accent);width:20px;height:20px;border-radius:50%;font-size:0.65rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;font-style:italic;font-family:Georgia,serif}
-        .info-btn:hover{background:var(--accent);color:var(--bg)}
-        .info-tip{display:none;position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#1a2332;border:1px solid var(--accent);border-radius:10px;padding:0.7rem 0.85rem;font-size:0.75rem;font-weight:400;font-style:normal;font-family:'Segoe UI',system-ui,sans-serif;color:var(--text);width:320px;max-height:300px;overflow-y:auto;z-index:200;line-height:1.45;box-shadow:0 8px 24px rgba(0,0,0,.5);white-space:normal;text-align:left}
-        .info-tip.show{display:block}
-        .info-tip strong{color:var(--accent);display:block;margin-top:0.4rem}
-        .info-tip strong:first-child{margin-top:0}
-        @media(max-width:768px){
-            .info-tip{width:280px;left:0;transform:none}
-        }
+        /* ── INFO BUTTON & PANEL ──────────────── */
+        .info-btn{background:none;border:1px solid var(--accent);color:var(--accent);width:20px;height:20px;border-radius:50%;font-size:0.65rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;font-style:italic;font-family:Georgia,serif}
+        .info-btn:hover,.info-btn.active{background:var(--accent);color:var(--bg)}
+        .info-panel{display:none;padding:0.65rem 0.9rem;background:rgba(0,0,0,.25);border-bottom:1px solid var(--border);font-size:0.78rem;line-height:1.5;color:var(--text-muted);max-height:250px;overflow-y:auto}
+        .info-panel.show{display:block}
+        .info-panel strong{color:var(--accent);display:block;margin-top:0.35rem}
+        .info-panel strong:first-child{margin-top:0}
 
         /* ── EMBED ───────────────────────────── */
         .embed-wrap{position:relative;width:100%;height:195px;background:#111827;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch}
@@ -154,19 +151,18 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Atazar</span>
-                        <button class="info-btn" onclick="toggleInfo(this)">i
-                            <div class="info-tip">
-                                <strong>NW (Noroestes)</strong>Otoño-invierno, fuertes, todo el dia. A veces racheados.
-                                <strong>SE (Surestes)</strong>El más constante, puede estar muchas horas. Flojo en general (para hidros), pero hay días fuertes y muy buenos.
-                                <strong>W (Oestes) — Regular</strong>Sube y baja. Previ mínima 15 nudos para que sea navegable (racha 15-18kt). No para principiantes por las rachas.
-                                <strong>SW (Suroeste) — Malo</strong>Mayor diferencia racha/medio. Va de 0 a 20 nudos sin aviso. El más violento.
-                            </div>
-                        </button>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                         <span class="spot-type type-lake">Embalse — Madrid</span>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/456408" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
+                </div>
+                <div class="info-panel">
+                    <strong>NW (Noroestes)</strong>Otoño-invierno, fuertes, todo el dia. A veces racheados.
+                    <strong>SE (Surestes)</strong>El más constante, puede estar muchas horas. Flojo en general (para hidros), pero hay días fuertes y muy buenos.
+                    <strong>W (Oestes) — Regular</strong>Sube y baja. Previ mínima 15 nudos para que sea navegable (racha 15-18kt). No para principiantes por las rachas.
+                    <strong>SW (Suroeste) — Malo</strong>Mayor diferencia racha/medio. Va de 0 a 20 nudos sin aviso. El más violento.
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?40.91,-3.49,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
@@ -207,16 +203,15 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Pantano de Alarcon</span>
-                        <button class="info-btn" onclick="toggleInfo(this)">i
-                            <div class="info-tip">
-                                <strong>Isla Conejos</strong>Prevision muy fiable (6 de 6 en 3 findes). Calidad de viento muy buena. Entorno precioso. Alojamiento rural a 1 km del spot. Cómodo para aprendizaje o baño. Muy recomendable.
-                            </div>
-                        </button>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                         <span class="spot-type type-lake">Embalse — Cuenca</span>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/185341" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
+                </div>
+                <div class="info-panel">
+                    <strong>Isla Conejos</strong>Prevision muy fiable (6 de 6 en 3 findes). Calidad de viento muy buena. Entorno precioso. Alojamiento rural a 1 km del spot. Cómodo para aprendizaje o baño. Muy recomendable.
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?39.72,-2.10,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
@@ -313,16 +308,15 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Somo</span>
-                        <button class="info-btn" onclick="toggleInfo(this)">i
-                            <div class="info-tip">
-                                NE y NO (NO solo expertos). Restricciones en verano. Mucha mejor ola que en Laredo. Mucho surf. Algo menos ventoso.
-                            </div>
-                        </button>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                         <span class="spot-type type-ocean">Playa — Cantabria</span>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/48694" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
+                </div>
+                <div class="info-panel">
+                    NE y NO (NO solo expertos). Restricciones en verano. Mucha mejor ola que en Laredo. Mucho surf. Algo menos ventoso.
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?43.44,-3.76,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
@@ -333,18 +327,17 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Laredo</span>
-                        <button class="info-btn" onclick="toggleInfo(this)">i
-                            <div class="info-tip">
-                                <strong>NE / E</strong>Se acelera a las 14:00 con marea subiendo. Ola onshore regularcilla. Efecto venturi entre el puntal y Santoña — máxima aceleración pero pasa de on a off en metros.
-                                <strong>Peligro</strong>Con cometa fácil liarla. Marea entrante lleva a las marismas. Con wing más o menos ok.
-                                <strong>Malo con</strong>NO y N. Muy raramente funciona con SO.
-                            </div>
-                        </button>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                         <span class="spot-type type-ocean">Playa — Cantabria</span>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/11040" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
+                </div>
+                <div class="info-panel">
+                    <strong>NE / E</strong>Se acelera a las 14:00 con marea subiendo. Ola onshore regularcilla. Efecto venturi entre el puntal y Santoña — máxima aceleración pero pasa de on a off en metros.
+                    <strong>Peligro</strong>Con cometa fácil liarla. Marea entrante lleva a las marismas. Con wing más o menos ok.
+                    <strong>Malo con</strong>NO y N. Muy raramente funciona con SO.
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?43.42,-3.42,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
@@ -392,16 +385,15 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Denia</span>
-                        <button class="info-btn" onclick="toggleInfo(this)">i
-                            <div class="info-tip">
-                                Entrada cómoda detrás del espigón (Windcenterdenia). También entrada en rocas — sitio muy bonito y viento fuerte. Funciona también con sur pero es offshore.
-                            </div>
-                        </button>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                         <span class="spot-type type-ocean">Costa — Alicante</span>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/6359" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
+                </div>
+                <div class="info-panel">
+                    Entrada cómoda detrás del espigón (Windcenterdenia). También entrada en rocas — sitio muy bonito y viento fuerte. Funciona también con sur pero es offshore.
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?38.84,0.11,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
@@ -438,16 +430,15 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Playa del Pudrimel</span>
-                        <button class="info-btn" onclick="toggleInfo(this)">i
-                            <div class="info-tip">
-                                El lugar de referencia del Mediterráneo.
-                            </div>
-                        </button>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                         <span class="spot-type type-ocean">Mar Menor — Murcia</span>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/48826" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
+                </div>
+                <div class="info-panel">
+                    El lugar de referencia del Mediterráneo.
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?37.73,-0.77,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
@@ -491,24 +482,13 @@ function openAllWG(ids) {
     });
 }
 
-// ── Info tooltip toggle ───────────────────────────────
+// ── Info panel toggle ─────────────────────────────────
 function toggleInfo(btn) {
-    var tip = btn.querySelector('.info-tip');
-    var wasOpen = tip.classList.contains('show');
-    // Close all open tooltips first
-    document.querySelectorAll('.info-tip.show').forEach(function(t) {
-        t.classList.remove('show');
-    });
-    if (!wasOpen) tip.classList.add('show');
+    var card = btn.closest('.spot-card');
+    var panel = card.querySelector('.info-panel');
+    var isOpen = panel.classList.toggle('show');
+    btn.classList.toggle('active', isOpen);
 }
-// Close tooltip when clicking outside
-document.addEventListener('click', function(e) {
-    if (!e.target.closest('.info-btn')) {
-        document.querySelectorAll('.info-tip.show').forEach(function(t) {
-            t.classList.remove('show');
-        });
-    }
-});
 </script>
 
 </body>
