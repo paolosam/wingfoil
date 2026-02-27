@@ -22,7 +22,6 @@
         html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
         body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;-webkit-overflow-scrolling:touch}
 
-        /* ── HEADER ──────────────────────────── */
         header{background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 100%);border-bottom:1px solid var(--border);padding:1rem 2rem}
         header h1{font-size:1.4rem;font-weight:700}
         .sub{margin-top:0.3rem;font-size:0.8rem;color:var(--text-muted);display:flex;gap:0.7rem;flex-wrap:wrap;align-items:center}
@@ -30,7 +29,6 @@
         .pill.go{border-color:var(--green);color:var(--green)}
         .pill.no{border-color:#ef4444;color:#ef4444}
 
-        /* ── TABS ────────────────────────────── */
         .tab-bar{display:flex;background:var(--card-bg);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
         .tab-btn{flex:1;padding:0.7rem 1rem;text-align:center;background:none;border:none;color:var(--text-muted);font-size:0.9rem;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s}
         .tab-btn:hover{color:var(--text);background:rgba(255,255,255,.03)}
@@ -38,10 +36,8 @@
         .tab-panel{display:block}
         .tab-panel.js-hidden{display:none}
 
-        /* ── MAIN ────────────────────────────── */
         main{max-width:1300px;margin:0 auto;padding:1rem}
 
-        /* ── REGION ──────────────────────────── */
         .region{margin-bottom:1.8rem}
         .region-head{display:flex;align-items:center;gap:0.5rem;margin-bottom:0.7rem;padding-bottom:0.35rem;border-bottom:2px solid var(--accent)}
         .region-head h2{font-size:1rem;font-weight:600;color:var(--accent)}
@@ -49,10 +45,8 @@
         .open-all{margin-left:auto;font-size:0.7rem;color:var(--accent);background:var(--accent-glow);border:1px solid rgba(56,189,248,.25);padding:0.2rem 0.6rem;border-radius:8px;cursor:pointer;transition:all .2s;text-decoration:none}
         .open-all:hover{background:var(--accent);color:var(--bg)}
 
-        /* ── SPOTS GRID ──────────────────────── */
         .spots-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(560px,1fr));gap:0.8rem}
 
-        /* ── CARD ────────────────────────────── */
         .spot-card{background:var(--card-bg);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color .2s}
         .spot-card:hover{border-color:rgba(56,189,248,.35)}
         .card-top{padding:0.6rem 0.9rem;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,.2);border-bottom:1px solid var(--border)}
@@ -61,11 +55,11 @@
         .spot-type{font-size:0.58rem;padding:0.08rem 0.4rem;border-radius:8px;text-transform:uppercase;letter-spacing:.05em}
         .type-ocean{background:rgba(56,189,248,.12);color:var(--accent);border:1px solid rgba(56,189,248,.25)}
         .type-lake{background:var(--lake-bg);color:var(--lake);border:1px solid rgba(6,182,212,.25)}
+        .type-wind{background:rgba(34,197,94,.1);color:var(--green);border:1px solid rgba(34,197,94,.3);font-weight:600}
         .card-links{display:flex;gap:0.35rem;align-items:center}
         .wg-link{font-size:0.7rem;color:var(--accent);text-decoration:none;padding:0.18rem 0.5rem;border-radius:6px;border:1px solid rgba(56,189,248,.3);transition:all .2s;white-space:nowrap}
         .wg-link:hover{background:var(--accent);color:var(--bg)}
 
-        /* ── INFO BUTTON & PANEL ──────────────── */
         .info-btn{background:none;border:1px solid var(--accent);color:var(--accent);width:20px;height:20px;border-radius:50%;font-size:0.65rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;font-style:italic;font-family:Georgia,serif}
         .info-btn:hover,.info-btn.active{background:var(--accent);color:var(--bg)}
         .info-panel{display:none;padding:0.65rem 0.9rem;background:rgba(0,0,0,.25);border-bottom:1px solid var(--border);font-size:0.78rem;line-height:1.5;color:var(--text-muted);max-height:250px;overflow-y:auto}
@@ -73,21 +67,17 @@
         .info-panel strong{color:var(--accent);display:block;margin-top:0.35rem}
         .info-panel strong:first-child{margin-top:0}
 
-        /* ── EMBED ───────────────────────────── */
         .embed-wrap{position:relative;width:100%;height:195px;background:#111827;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch}
         .embed-wrap iframe{position:relative;z-index:1;min-width:900px;width:100%;height:100%;border:none}
         .embed-fallback{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:0.85rem;text-decoration:none;gap:0.4rem}
         .embed-fallback:hover{text-decoration:underline}
 
-        /* ── FOOTER ──────────────────────────── */
         footer{text-align:center;padding:1.2rem;color:var(--text-dim);font-size:0.7rem;border-top:1px solid var(--border)}
         footer a{color:var(--accent)}
 
-        /* ── TABLET ──────────────────────────── */
         @media(max-width:1024px){
             .spots-grid{grid-template-columns:1fr}
         }
-        /* ── MOBILE ──────────────────────────── */
         @media(max-width:768px){
             header{padding:.7rem .8rem}
             header h1{font-size:1.1rem}
@@ -98,7 +88,6 @@
             .embed-wrap{height:210px}
             .wg-link{padding:.3rem .6rem;min-height:36px;display:inline-flex;align-items:center}
         }
-        /* ── SMALL PHONE ────────────────────── */
         @media(max-width:480px){
             header{padding:.5rem .6rem}
             header h1{font-size:1rem}
@@ -133,12 +122,9 @@
 
 <main>
 
-<!-- ════════════════════════════════════════════════════════ -->
-<!--  TAB 1 — EMBALSES                                     -->
-<!-- ════════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 1 — EMBALSES ═══ -->
 <div class="tab-panel" id="tab-inland">
 
-    <!-- Centro -->
     <section class="region">
         <div class="region-head">
             <span style="font-size:1.05rem">🏞</span>
@@ -147,71 +133,96 @@
             <a class="open-all" onclick="openAllWG([456408,83070,104905,185341])">Abrir todos en Windguru ➜</a>
         </div>
         <div class="spots-grid">
+
+            <!-- ATAZAR -->
             <div class="spot-card">
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Atazar</span>
                         <button class="info-btn" onclick="toggleInfo(this)">i</button>
-                        <span class="spot-type type-lake">Embalse — Madrid</span>
+                        <span class="spot-type type-wind">N · NW</span>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/456408" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
                 </div>
                 <div class="info-panel">
-                    <strong>NW (Noroestes)</strong>Otoño-invierno, fuertes, todo el dia. A veces racheados.
-                    <strong>SE (Surestes)</strong>El más constante, puede estar muchas horas. Flojo en general (para hidros), pero hay días fuertes y muy buenos.
-                    <strong>W (Oestes) — Regular</strong>Sube y baja. Previ mínima 15 nudos para que sea navegable (racha 15-18kt). No para principiantes por las rachas.
-                    <strong>SW (Suroeste) — Malo</strong>Mayor diferencia racha/medio. Va de 0 a 20 nudos sin aviso. El más violento.
+                    <strong>NW</strong>Otoño-invierno, fuertes, todo el dia. A veces racheados.
+                    <strong>SE</strong>El más constante. Flojo (para hidros), pero hay días buenos.
+                    <strong>W</strong>Sube y baja. Previ min 15kt para que sea navegable. No para principiantes.
+                    <strong>E / SW — Malo</strong>E no llega. SW muy violento: 0 a 20kt sin aviso.
+                    <strong>Acceso</strong>Club: 5€, parking cierra 18-19h. Agua muy fría en invierno (~5°C). Permiso "declaración responsable" obligatorio.
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?40.91,-3.49,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
                     <iframe src="https://embed.windy.com/embed2.html?lat=40.91&lon=-3.49&detailLat=40.91&detailLon=-3.49&zoom=10&level=surface&overlay=wind&product=gfs&metricWind=kt&metricTemp=%C2%B0C&detail=true&marker=true&calendar=now&type=forecast&location=coordinates" loading="lazy" title="Atazar"></iframe>
                 </div>
             </div>
+
+            <!-- EL VELLON -->
             <div class="spot-card">
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">El Vellon</span>
-                        <span class="spot-type type-lake">Embalse — Madrid</span>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
+                        <span class="spot-type type-wind">NW · SW · SE</span>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/83070" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
+                </div>
+                <div class="info-panel">
+                    <strong>N — Malo</strong>Norte no funciona en Vellon.
+                    <strong>NW / SW / SE</strong>Funcionan bien. Con SW mejor aquí que en Atazar.
+                    <strong>Acceso</strong>Club cierra 17-19h (lunes cerrado). Ideal para principiantes. Permiso "declaración responsable" obligatorio.
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?40.79,-3.60,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
                     <iframe src="https://embed.windy.com/embed2.html?lat=40.79&lon=-3.60&detailLat=40.79&detailLon=-3.60&zoom=10&level=surface&overlay=wind&product=gfs&metricWind=kt&metricTemp=%C2%B0C&detail=true&marker=true&calendar=now&type=forecast&location=coordinates" loading="lazy" title="El Vellon"></iframe>
                 </div>
             </div>
+
+            <!-- CAZALEGAS -->
             <div class="spot-card">
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Cazalegas</span>
-                        <span class="spot-type type-lake">Embalse — Toledo</span>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
+                        <span class="spot-type type-wind">W · SW</span>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/104905" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
+                </div>
+                <div class="info-panel">
+                    <strong>W / SW</strong>Los mejores. W empuja hacia la orilla, seguro para volver.
+                    <strong>E — No fiable</strong>Falla bastante. Solo mañanero. Riesgo de derivar a la otra orilla.
+                    <strong>Peligro</strong>Durante desembalses: corrientes fuertes, ramas flotantes. Alerta roja = prohibido navegar. Mejillón cebra: desinfección obligatoria. Peces (barbos) causan frenazos con el foil.
+                    <strong>Acceso</strong>Sin horario de club. Permiso obligatorio. Mitad distancia de Madrid que Alarcón.
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?39.92,-4.72,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
                     <iframe src="https://embed.windy.com/embed2.html?lat=39.92&lon=-4.72&detailLat=39.92&detailLon=-4.72&zoom=10&level=surface&overlay=wind&product=gfs&metricWind=kt&metricTemp=%C2%B0C&detail=true&marker=true&calendar=now&type=forecast&location=coordinates" loading="lazy" title="Cazalegas"></iframe>
                 </div>
             </div>
+
+            <!-- ALARCON -->
             <div class="spot-card">
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Pantano de Alarcon</span>
                         <button class="info-btn" onclick="toggleInfo(this)">i</button>
-                        <span class="spot-type type-lake">Embalse — Cuenca</span>
+                        <span class="spot-type type-wind">SE · S · SW · N</span>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/185341" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
                 </div>
                 <div class="info-panel">
-                    <strong>Isla Conejos</strong>Prevision muy fiable (6 de 6 en 3 findes). Calidad de viento muy buena. Entorno precioso. Alojamiento rural a 1 km del spot. Cómodo para aprendizaje o baño. Muy recomendable.
+                    <strong>SE — El mejor</strong>El más constante y fiable de Alarcón.
+                    <strong>S / SW / N</strong>Funcionan. No hay dirección totalmente mala.
+                    <strong>E / W — Malo</strong>E es viento fantasma, nunca entra. W no es de fiar.
+                    <strong>Spot</strong>Playa de Manchamar (principal). Prevision muy fiable. Agua limpia. 4h de Madrid — solo merece con previ fuerte. Alojamiento rural a 1km.
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?39.72,-2.10,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
@@ -221,7 +232,6 @@
         </div>
     </section>
 
-    <!-- Noreste -->
     <section class="region">
         <div class="region-head">
             <span style="font-size:1.05rem">🏞</span>
@@ -230,15 +240,20 @@
             <a class="open-all" onclick="openAllWG([216216])">Abrir en Windguru ➜</a>
         </div>
         <div class="spots-grid">
+            <!-- LA LOTETA -->
             <div class="spot-card">
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">La Loteta</span>
-                        <span class="spot-type type-lake">Embalse — Zaragoza</span>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
+                        <span class="spot-type type-wind">NW (Cierzo)</span>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/216216" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
+                </div>
+                <div class="info-panel">
+                    Spot muy ventoso (cierzo). Ola significativa — cerca de la isla más calma. Necesita wing pequeño (2-3.5m frecuente).
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?41.82,-1.27,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
@@ -250,9 +265,7 @@
 
 </div>
 
-<!-- ════════════════════════════════════════════════════════ -->
-<!--  TAB 2 — COSTA Y MAR                                  -->
-<!-- ════════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 2 — COSTA Y MAR ═══ -->
 <div class="tab-panel" id="tab-coastal">
 
     <section class="region">
@@ -263,21 +276,27 @@
             <a class="open-all" onclick="openAllWG([43,48748])">Abrir todos en Windguru ➜</a>
         </div>
         <div class="spots-grid">
+            <!-- TARIFA -->
             <div class="spot-card">
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Tarifa</span>
-                        <span class="spot-type type-ocean">Estrecho — Cadiz</span>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
+                        <span class="spot-type type-wind">W (Poniente) · E (Levante)</span>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/43" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
+                </div>
+                <div class="info-panel">
+                    Condiciones todo el año. En enero salen días muy buenos. Poniente (W) y Levante (E) principales. La Línea de la Concepción como alternativa con poniente y agua flat.
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?36.01,-5.60,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
                     <iframe src="https://embed.windy.com/embed2.html?lat=36.01&lon=-5.60&detailLat=36.01&detailLon=-5.60&zoom=10&level=surface&overlay=wind&product=gfs&metricWind=kt&metricTemp=%C2%B0C&detail=true&marker=true&calendar=now&type=forecast&location=coordinates" loading="lazy" title="Tarifa"></iframe>
                 </div>
             </div>
+            <!-- PUNTA UMBRIA -->
             <div class="spot-card">
                 <div class="card-top">
                     <div class="card-left">
@@ -304,40 +323,42 @@
             <a class="open-all" onclick="openAllWG([48694,11040])">Abrir todos en Windguru ➜</a>
         </div>
         <div class="spots-grid">
+            <!-- SOMO -->
             <div class="spot-card">
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Somo</span>
                         <button class="info-btn" onclick="toggleInfo(this)">i</button>
-                        <span class="spot-type type-ocean">Playa — Cantabria</span>
+                        <span class="spot-type type-wind">NE · NW</span>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/48694" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
                 </div>
                 <div class="info-panel">
-                    NE y NO (NO solo expertos). Restricciones en verano. Mucha mejor ola que en Laredo. Mucho surf. Algo menos ventoso.
+                    NE y NW (NW solo expertos). Restricciones en verano. Mejor ola que Laredo. Mucho surf. Algo menos ventoso.
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?43.44,-3.76,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
                     <iframe src="https://embed.windy.com/embed2.html?lat=43.44&lon=-3.76&detailLat=43.44&detailLon=-3.76&zoom=10&level=surface&overlay=wind&product=gfs&metricWind=kt&metricTemp=%C2%B0C&detail=true&marker=true&calendar=now&type=forecast&location=coordinates" loading="lazy" title="Somo"></iframe>
                 </div>
             </div>
+            <!-- LAREDO -->
             <div class="spot-card">
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Laredo</span>
                         <button class="info-btn" onclick="toggleInfo(this)">i</button>
-                        <span class="spot-type type-ocean">Playa — Cantabria</span>
+                        <span class="spot-type type-wind">NE · E</span>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/11040" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
                 </div>
                 <div class="info-panel">
-                    <strong>NE / E</strong>Se acelera a las 14:00 con marea subiendo. Ola onshore regularcilla. Efecto venturi entre el puntal y Santoña — máxima aceleración pero pasa de on a off en metros.
-                    <strong>Peligro</strong>Con cometa fácil liarla. Marea entrante lleva a las marismas. Con wing más o menos ok.
-                    <strong>Malo con</strong>NO y N. Muy raramente funciona con SO.
+                    <strong>NE / E</strong>Se acelera a las 14:00 con marea subiendo. Efecto venturi puntal-Santoña: pasa de on a off en metros.
+                    <strong>Peligro</strong>Marea entrante lleva a las marismas (con cometa muy peligroso, con wing ok).
+                    <strong>NW / N / SW — Malo.</strong>
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?43.42,-3.42,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
@@ -393,7 +414,7 @@
                     </div>
                 </div>
                 <div class="info-panel">
-                    Entrada cómoda detrás del espigón (Windcenterdenia). También entrada en rocas — sitio muy bonito y viento fuerte. Funciona también con sur pero es offshore.
+                    Entrada cómoda detrás del espigón (Windcenterdenia). También entrada en rocas — bonito y viento fuerte. Funciona con S pero es offshore.
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?38.84,0.11,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
@@ -459,18 +480,13 @@
 </footer>
 
 <script>
-// ── Progressive enhancement: enable tabs ──────────────
 (function() {
     document.getElementById('tab-coastal').classList.add('js-hidden');
 })();
 
 function switchTab(tab) {
-    document.querySelectorAll('.tab-panel').forEach(function(p) {
-        p.classList.add('js-hidden');
-    });
-    document.querySelectorAll('.tab-btn').forEach(function(b) {
-        b.classList.remove('active');
-    });
+    document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.add('js-hidden'); });
+    document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
     document.getElementById('tab-' + tab).classList.remove('js-hidden');
     var btns = document.querySelectorAll('.tab-btn');
     (tab === 'inland' ? btns[0] : btns[1]).classList.add('active');
@@ -482,7 +498,6 @@ function openAllWG(ids) {
     });
 }
 
-// ── Info panel toggle ─────────────────────────────────
 function toggleInfo(btn) {
     var card = btn.closest('.spot-card');
     var panel = card.querySelector('.info-panel');
