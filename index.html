@@ -143,7 +143,7 @@
 <header>
     <h1>🪁 Wingfoil desde Madrid — Todos los spots</h1>
     <div class="sub">
-        Tiempo aprox. en coche desde Madrid · Prevision Windy · Link Windguru en cada spot
+        Tiempo aprox. en coche desde Madrid · Prevision Windy · Windguru en cada spot
     </div>
 </header>
 
@@ -262,7 +262,7 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Cazalegas</span>
-                        <span class="spot-type type-wind">W · SW</span>
+                        <span class="spot-type type-wind">W · SW · E</span>
                         <span class="travel-time">🚗 1h 10min</span>
                         <button class="info-btn" onclick="toggleInfo(this)">i</button>
                     </div>
@@ -272,7 +272,7 @@
                 </div>
                 <div class="info-panel">
                     <strong>W / SW</strong>Los mejores. W empuja hacia la orilla, seguro para volver.
-                    <strong>E — No fiable</strong>Falla bastante. Solo mañanero. Riesgo de derivar a la otra orilla.
+                    <strong>E</strong>Funciona por las mañanas. Viento más flojo pero navegable. Ojo: puede derivarte a la otra orilla.
                     <strong>Peligro</strong>Durante desembalses: corrientes fuertes, ramas flotantes. Alerta roja = prohibido navegar. Mejillón cebra: desinfección obligatoria. Peces (barbos) causan frenazos con el foil.
                     <strong>Acceso</strong>Sin horario de club. Permiso obligatorio. Mitad distancia de Madrid que Alarcón.
                 </div>
@@ -380,6 +380,41 @@
         </div>
     </section>
 
+    <section class="region">
+        <div class="region-head" onclick="toggleRegion(this)">
+            <span class="region-chevron">▼</span>
+            <span style="font-size:1.05rem">🏞</span>
+            <h2>Norte — Cantabria</h2>
+
+            <a class="open-all" onclick="openAllWG([501083])">Abrir en Windguru ➜</a>
+        </div>
+        <div class="spots-grid">
+            <!-- EMBALSE DEL EBRO -->
+            <div class="spot-card">
+                <div class="card-top">
+                    <div class="card-left">
+                        <span class="spot-name">Embalse del Ebro</span>
+                        <span class="spot-type type-wind">N · S</span>
+                        <span class="travel-time">🚗 3h 45min</span>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
+                    </div>
+                    <div class="card-links">
+                        <a class="wg-link" href="https://www.windguru.cz/501083" target="_blank" rel="noopener">Windguru ➜</a>
+                    </div>
+                </div>
+                <div class="info-panel">
+                    <strong>N — Térmico de verano</strong>Viento térmico del norte en verano. Constante por las tardes, ideal para wingfoil.
+                    <strong>S</strong>Funciona bien, especialmente en otoño-invierno. Más fuerte y sinóptico.
+                    <strong>Spot</strong>Embalse grande a 837m de altitud, cerca de Reinosa. Escuela de kite/wingfoil local (ebroKite). Agua templada en verano. Buen spot para todos los niveles.
+                </div>
+                <div class="embed-wrap">
+                    <a class="embed-fallback" href="https://www.windy.com/?43.01,-3.90,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
+                    <iframe src="https://embed.windy.com/embed2.html?lat=43.01&lon=-3.90&detailLat=43.01&detailLon=-3.90&zoom=10&level=surface&overlay=wind&product=gfs&metricWind=kt&metricTemp=%C2%B0C&detail=true&marker=true&calendar=now&type=forecast&location=coordinates" loading="lazy" title="Embalse del Ebro"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </div>
 
 <!-- ═══ TAB 2 — COSTA Y MAR ═══ -->
@@ -408,7 +443,9 @@
                     </div>
                 </div>
                 <div class="info-panel">
-                    Condiciones todo el año. En enero salen días muy buenos. Poniente (W) y Levante (E) principales. La Línea de la Concepción como alternativa con poniente y agua flat.
+                    <strong>W (Poniente)</strong>Viento del oeste, constante. Mar más limpio. Playa de Los Lances y Valdevaqueros principales. La Línea de la Concepción como alternativa con agua flat.
+                    <strong>E (Levante)</strong>Viento del este, más fuerte y racheado. Efecto venturi del Estrecho. Puede pasar de 0 a 30kt.
+                    <strong>Spot</strong>Condiciones todo el año. En enero salen días muy buenos. Capital del viento en Europa.
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?36.01,-5.60,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
@@ -420,12 +457,18 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Punta Umbria</span>
-                        <span class="spot-type type-ocean">Playa — Huelva</span>
+                        <span class="spot-type type-wind">W (Poniente)</span>
                         <span class="travel-time">🚗 6h 20min</span>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/48748" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
+                </div>
+                <div class="info-panel">
+                    <strong>W / WSW (Poniente)</strong>Viento predominante (~80% de los días). Estable y constante. Térmico en verano: 15-20kt de mediodía al atardecer. Mejor temporada mayo-septiembre.
+                    <strong>E / SE (Levante)</strong>Menos frecuente y más impredecible. Llega con temporales del Estrecho.
+                    <strong>Spots</strong>La Canaleta y El Camarón (todos niveles). La Ría (solo expertos — corrientes de marea). En verano solo se puede navegar en La Canaleta.
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?37.18,-6.96,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
@@ -458,7 +501,11 @@
                     </div>
                 </div>
                 <div class="info-panel">
-                    NE y NW (NW solo expertos). Restricciones en verano. Mejor ola que Laredo. Mucho surf. Algo menos ventoso.
+                    <strong>NE (side-onshore) — El mejor</strong>Térmico primavera-verano, 12-17kt por las tardes. Estable, ideal para wingfoil.
+                    <strong>NW (side-onshore)</strong>Otoño-invierno ("Gallego"). Racheado — solo expertos.
+                    <strong>E (sideshore)</strong>Primavera, condiciones estables.
+                    <strong>SW / S — Peligroso</strong>Offshore. Te lleva mar adentro. Evitar.
+                    <strong>Spot</strong>Restricciones en verano. Mejor ola que Laredo. Mucho surf.
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?43.44,-3.76,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
@@ -504,12 +551,18 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Playa del Trabucador</span>
-                        <span class="spot-type type-ocean">Delta del Ebro — Tarragona</span>
+                        <span class="spot-type type-wind">S · N (Tramontana)</span>
                         <span class="travel-time">🚗 5h 15min</span>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/4899" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
+                </div>
+                <div class="info-panel">
+                    <strong>S / SSW — Abril a septiembre</strong>12-20kt. Onshore ideal. Laguna interior con agua plana y poca profundidad — perfecto para aprender wing y kite.
+                    <strong>N / Tramontana — Octubre a marzo</strong>18-30kt, fuerte. Con norte el spot se traslada a Riumar (cara opuesta del delta). Cometas 7-9m.
+                    <strong>Spot</strong>Referencia del Mediterráneo. Escuelas activas. Navegación sin restricciones todo el año.
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?40.62,0.73,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
@@ -532,7 +585,7 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Denia</span>
-                        <span class="spot-type type-ocean">Costa — Alicante</span>
+                        <span class="spot-type type-wind">E (Garbí) · W (Poniente)</span>
                         <span class="travel-time">🚗 4h 20min</span>
                         <button class="info-btn" onclick="toggleInfo(this)">i</button>
                     </div>
@@ -541,7 +594,10 @@
                     </div>
                 </div>
                 <div class="info-panel">
-                    Entrada cómoda detrás del espigón (Windcenterdenia). También entrada en rocas — bonito y viento fuerte. Funciona con S pero es offshore.
+                    <strong>E / ESE (Garbí) — Marzo a septiembre</strong>Térmico de verano, el mejor. Les Deveses: spot de referencia para wingfoil. Entra a las 14:00h, 12-25kt hasta las 19:00h.
+                    <strong>W (Poniente) / NW (Mistral) — Octubre a marzo</strong>Vientos sinópticos fuertes. Spot de Playa Molins. Cometas 7-9m.
+                    <strong>Espigón Norte</strong>Agua plana todo el año, ideal para freestyle. Entrada cómoda detrás del espigón (Windcenterdenia).
+                    <strong>S — Offshore</strong>Funciona pero es offshore. Solo expertos.
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?38.84,0.11,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
@@ -564,12 +620,18 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Cabo de Gata</span>
-                        <span class="spot-type type-ocean">Costa — Almeria</span>
+                        <span class="spot-type type-wind">E (Levante) · W (Poniente)</span>
                         <span class="travel-time">🚗 5h 00min</span>
+                        <button class="info-btn" onclick="toggleInfo(this)">i</button>
                     </div>
                     <div class="card-links">
                         <a class="wg-link" href="https://www.windguru.cz/38196" target="_blank" rel="noopener">Windguru ➜</a>
                     </div>
+                </div>
+                <div class="info-panel">
+                    <strong>E / SE (Levante) — Mayo a octubre</strong>Intenso y persistente, 18-35kt. Olas. Playas: Los Genoveses, El Corralete, La Fabriquilla. Expertos.
+                    <strong>W / WSW (Poniente) — Noviembre a abril</strong>Más suave, mar calmado. Calas del sector oriental del cabo.
+                    <strong>Restricciones</strong>Prohibido kitesurf del 15 jun al 15 sep en playas balizadas. Consultar zonas habilitadas. Parque Natural — respetar normas de acceso.
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?36.72,-2.19,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
@@ -580,7 +642,7 @@
                 <div class="card-top">
                     <div class="card-left">
                         <span class="spot-name">Playa del Pudrimel</span>
-                        <span class="spot-type type-ocean">Mar Menor — Murcia</span>
+                        <span class="spot-type type-wind">SW · W · N</span>
                         <span class="travel-time">🚗 4h 40min</span>
                         <button class="info-btn" onclick="toggleInfo(this)">i</button>
                     </div>
@@ -589,7 +651,9 @@
                     </div>
                 </div>
                 <div class="info-panel">
-                    El lugar de referencia del Mediterráneo.
+                    <strong>SW / SSW (onshore) — El mejor</strong>Térmico primavera-otoño, ~18kt de mediodía al atardecer. Agua plana dentro del abrigo rocoso (~300m) — perfecto para freestyle y aprendizaje.
+                    <strong>W y N</strong>Navegables pero menos estables. Mayor rachas por efecto de la Isla del Ciervo.
+                    <strong>Spot</strong>Referencia del Mediterráneo. Zona exterior con olas para surf-kite. Mejor temporada: otoño a primavera. Excelente para wingfoil (laguna del Mar Menor, agua plana y somera).
                 </div>
                 <div class="embed-wrap">
                     <a class="embed-fallback" href="https://www.windy.com/?37.73,-0.77,10" target="_blank">💨 Abrir prevision en Windy.com ➜</a>
